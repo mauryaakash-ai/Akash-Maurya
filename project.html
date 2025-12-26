@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Akash Maurya</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-10 py-4 bg-white dark:bg-gray-800 shadow">
+    <div class="text-xl font-bold">Akash Maurya</div>
+    <div class="flex gap-6 items-center">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="text-indigo-600 font-semibold">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button id="darkToggle" class="px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm">🌙 / ☀️</button>
+    </div>
+  </nav>
+
+  <!-- Projects -->
+  <main class="max-w-6xl mx-auto px-6 py-20">
+    <h1 class="text-4xl font-extrabold mb-12">Projects</h1>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold mb-2">ImageLab – K-Means Image Compressor</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Implemented image compression using K-Means clustering achieving 40–60% size reduction.
+          <br><strong>Tech:</strong> Python, OpenCV, scikit-learn
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold mb-2">KrishiShram – Farmer Labour Management</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Web app for tracking labour attendance, work logs, and wages.
+          <br><strong>Tech:</strong> Flask, JavaScript, SQLite
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold mb-2">Snake Iris Biometric System</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Research project using hybrid biometric authentication (snake skin + iris).
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold mb-2">Autonomous Line-Following RC Car</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Built an autonomous robot using IR sensors and PID-like logic.
+          <br><strong>Tech:</strong> Arduino, ESP32
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Dark mode script -->
+  <script>
+    const root = document.documentElement;
+    const btn = document.getElementById("darkToggle");
+    if (localStorage.getItem("theme") === "dark") root.classList.add("dark");
+    btn.onclick = () => {
+      root.classList.toggle("dark");
+      localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
+    };
+  </script>
+
+</body>
+</html>
