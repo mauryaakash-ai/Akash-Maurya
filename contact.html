@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Akash Maurya</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-10 py-4 bg-white dark:bg-gray-800 shadow">
+    <div class="text-xl font-bold">Akash Maurya</div>
+    <div class="flex gap-6 items-center">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html" class="text-indigo-600 font-semibold">Contact</a>
+      <button id="darkToggle" class="px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm">🌙 / ☀️</button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-20">
+    <h1 class="text-4xl font-extrabold mb-10">Contact Me</h1>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <a href="mailto:A24ARIU0012@bennett.edu.in"
+        class="p-6 bg-blue-600 text-white rounded-xl font-semibold">📧 Official Email</a>
+
+      <a href="mailto:mauryaakash2005@gmail.com"
+        class="p-6 bg-blue-500 text-white rounded-xl font-semibold">✉️ Personal Email</a>
+
+      <a href="https://wa.me/8869973263"
+        class="p-6 bg-green-600 text-white rounded-xl font-semibold">💬 WhatsApp</a>
+
+      <a href="https://www.linkedin.com/in/akashmaurya-97617a32a"
+        class="p-6 bg-sky-600 text-white rounded-xl font-semibold">🔗 LinkedIn</a>
+
+      <a href="https://github.com/mauryaakash-ai"
+        class="p-6 bg-gray-800 text-white rounded-xl font-semibold">🐙 GitHub</a>
+    </div>
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    const btn = document.getElementById("darkToggle");
+    if (localStorage.getItem("theme") === "dark") root.classList.add("dark");
+    btn.onclick = () => {
+      root.classList.toggle("dark");
+      localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
+    };
+  </script>
+
+</body>
+</html>
