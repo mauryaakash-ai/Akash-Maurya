@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Akash Maurya</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav class="flex justify-between items-center px-10 py-4 bg-white dark:bg-gray-800 shadow">
+    <div class="text-xl font-bold">Akash Maurya</div>
+    <div class="flex gap-6 items-center">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html" class="text-indigo-600 font-semibold">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button id="darkToggle"
+        class="px-3 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-sm">🌙 / ☀️</button>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="max-w-4xl mx-auto px-6 py-20">
+
+    <!-- HEADER -->
+    <header class="mb-14">
+      <h1 class="text-4xl font-extrabold mb-2">Akash Maurya</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        B.Tech (Artificial Intelligence) Undergraduate
+      </p>
+
+      <a href="Akash_resume.pdf" download
+        class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold">
+        📄 Download Resume
+      </a>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold flex items-center gap-2 mb-4">
+         Summary
+      </h2>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        Driven and curious B.Tech (Artificial Intelligence) undergraduate with strong foundations
+        in machine learning, data structures, and robotics. Experienced in leadership roles and
+        collaborative technical environments. Actively seeking internships or research opportunities
+        to apply AI concepts to real-world problems.
+      </p>
+    </section>
+
+    <!-- EDUCATION TIMELINE -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold flex items-center gap-2 mb-6">
+        🎓 Education
+      </h2>
+
+      <div class="border-l-2 border-indigo-500 pl-6 space-y-8">
+
+        <div>
+          <span class="text-sm text-indigo-600 font-semibold">2024 – Present</span>
+          <h3 class="text-xl font-semibold">B.Tech in Artificial Intelligence</h3>
+          <p class="text-gray-600 dark:text-gray-400">Bennett University</p>
+          <p class="text-sm">CGPA: 8.35 / 10</p>
+        </div>
+
+        <div>
+          <span class="text-sm text-indigo-600 font-semibold">2022 – 2023</span>
+          <h3 class="text-xl font-semibold">Class XII (PCM)</h3>
+          <p class="text-gray-600 dark:text-gray-400">UP Board</p>
+          <p class="text-sm">Result: 88%</p>
+        </div>
+
+        <div>
+          <span class="text-sm text-indigo-600 font-semibold">2023 – 2024</span>
+          <h3 class="text-xl font-semibold">B.Sc Mathematics (Discontinued)</h3>
+          <p class="text-gray-600 dark:text-gray-400">Avadh University</p>
+          <p class="text-sm">CGPA: 7.55 / 10</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold flex items-center gap-2 mb-6">
+        🛠 Technical Skills
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
+        <p><strong>Languages:</strong> Python, C, C++, SQL</p>
+        <p><strong>Machine Learning:</strong> K-Means, Regression, Classification</p>
+        <p><strong>Libraries:</strong> NumPy, Pandas, scikit-learn, OpenCV, Matplotlib</p>
+        <p><strong>Core CS:</strong> OOP, Data Structures, Algorithms</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold flex items-center gap-2 mb-6">
+         Leadership & Experience
+      </h2>
+
+      <div class="border-l-2 border-indigo-500 pl-6">
+        <span class="text-sm text-indigo-600 font-semibold">2024 – Present</span>
+        <h3 class="text-xl font-semibold">Secretary & Co-Founder</h3>
+        <p class="text-gray-600 dark:text-gray-400">RoboGenesis Club — Bennett University</p>
+
+        <ul class="list-disc ml-6 mt-3 text-gray-700 dark:text-gray-300">
+          <li>Co-founded a robotics and AI-focused student organization.</li>
+          <li>Organized technical workshops and student onboarding sessions.</li>
+          <li>Mentored peers and managed project documentation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-semibold flex items-center gap-2 mb-6">
+         Certifications
+      </h2>
+
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-1">
+        <li>Programming in Python</li>
+        <li>Google AI Essentials</li>
+        <li>AI For Everyone (Coursera)</li>
+        <li>Prompt Engineering (Short Course)</li>
+      </ul>
+    </section>
+
+    <!-- AWARDS -->
+    <section>
+      <h2 class="text-2xl font-semibold flex items-center gap-2 mb-6">
+         Awards & Achievements
+      </h2>
+
+      <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-1">
+        <li>INSPIRE Scholarship (DST) — Awarded during B.Sc Mathematics (1st Year)</li>
+        <li>Academic Silver Medal — Top 10 rank in Class XII (UP Board)</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- DARK MODE SCRIPT -->
+  <script>
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById("darkToggle");
+
+    if (localStorage.getItem("theme") === "dark") {
+      root.classList.add("dark");
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        root.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+  </script>
+
+</body>
+</html>
