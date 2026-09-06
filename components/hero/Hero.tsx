@@ -20,7 +20,7 @@ export function Hero() {
 
           <div className="inline-flex items-center gap-1.5 text-xs font-mono text-stone-600 dark:text-stone-400 bg-stone-100 dark:bg-stone-900 px-3 py-1 rounded-md border border-stone-200 dark:border-stone-800">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Bennett University • B.Tech AI (CGPA 8.71)</span>
+            <span>Available for AI/ML Engineering & Research</span>
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export function Hero() {
 
             {/* Subtitle Bio */}
             <p className="text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
-              AI undergraduate at Bennett University with hands-on research in deep learning, computer vision, and image super-resolution. Investigating CNN and Vision Transformer architectures, self-supervised representation learning (SimCLR), and real-time embedded robotic control.
+              AI/ML undergraduate researcher with hands-on experience in deep learning, computer vision, and image super-resolution. Investigating CNN and Vision Transformer architectures, self-supervised representation learning (SimCLR), and real-time embedded robotic control.
             </p>
 
             {/* Action Buttons */}

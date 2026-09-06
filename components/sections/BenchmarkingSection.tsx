@@ -29,7 +29,7 @@ export function BenchmarkingSection() {
         <div className="flex border-b border-stone-200 dark:border-stone-800 mb-8 space-x-2">
           <button
             onClick={() => setActiveTab('architectures')}
-            className={`pb-3 px-4 font-mono text-xs uppercase tracking-wider font-semibold border-b-2 transition-all ${
+            className={`pb-3 px-4 font-mono text-xs uppercase tracking-wider font-semibold border-b-2 transition-all cursor-pointer ${
               activeTab === 'architectures'
                 ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400'
                 : 'border-transparent text-stone-500 hover:text-stone-900 dark:hover:text-stone-100'
@@ -39,7 +39,7 @@ export function BenchmarkingSection() {
           </button>
           <button
             onClick={() => setActiveTab('datasets')}
-            className={`pb-3 px-4 font-mono text-xs uppercase tracking-wider font-semibold border-b-2 transition-all ${
+            className={`pb-3 px-4 font-mono text-xs uppercase tracking-wider font-semibold border-b-2 transition-all cursor-pointer ${
               activeTab === 'datasets'
                 ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400'
                 : 'border-transparent text-stone-500 hover:text-stone-900 dark:hover:text-stone-100'
@@ -49,7 +49,7 @@ export function BenchmarkingSection() {
           </button>
           <button
             onClick={() => setActiveTab('metrics')}
-            className={`pb-3 px-4 font-mono text-xs uppercase tracking-wider font-semibold border-b-2 transition-all ${
+            className={`pb-3 px-4 font-mono text-xs uppercase tracking-wider font-semibold border-b-2 transition-all cursor-pointer ${
               activeTab === 'metrics'
                 ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400'
                 : 'border-transparent text-stone-500 hover:text-stone-900 dark:hover:text-stone-100'
@@ -69,7 +69,7 @@ export function BenchmarkingSection() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-xs font-bold text-stone-900 dark:text-stone-100">
+                    <span className="font-mono text-xs font-bold text-stone-950 dark:text-stone-50">
                       {arch.name}
                     </span>
                     <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">
@@ -100,7 +100,7 @@ export function BenchmarkingSection() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-xs font-bold text-stone-900 dark:text-stone-100 flex items-center gap-1.5">
+                    <span className="font-mono text-xs font-bold text-stone-950 dark:text-stone-50 flex items-center gap-1.5">
                       <Database className="w-3.5 h-3.5 text-blue-600" />
                       {dataset.name}
                     </span>
@@ -129,7 +129,7 @@ export function BenchmarkingSection() {
                 className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg p-6 shadow-xs space-y-3"
               >
                 <div className="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
-                  <span className="font-mono text-base font-bold text-stone-900 dark:text-stone-100">
+                  <span className="font-mono text-base font-bold text-stone-950 dark:text-stone-50">
                     {metric.metric}
                   </span>
                   <Activity className="w-4 h-4 text-blue-600" />
@@ -151,7 +151,7 @@ export function BenchmarkingSection() {
         <div className="mt-8 p-4 rounded-lg bg-stone-50 dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 text-xs font-mono text-stone-600 dark:text-stone-400 flex items-start gap-2.5">
           <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
           <span>
-            <strong>Experimental Discipline:</strong> All architectures and datasets reflect verified research environments executed across PyTorch research repositories at ViSecure Systems, Ashoka University, and Bennett University.
+            <strong>Experimental Discipline:</strong> All architectures and datasets reflect verified research environments executed across PyTorch research repositories and benchmark pipelines.
           </span>
         </div>
       </div>

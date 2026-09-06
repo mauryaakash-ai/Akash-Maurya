@@ -29,9 +29,9 @@ export function ResearchConsole() {
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-200/60 dark:border-stone-800/60">
-          <span className="text-stone-500 dark:text-stone-400 text-[11px]">Institution & Degree:</span>
+          <span className="text-stone-500 dark:text-stone-400 text-[11px]">Specialization:</span>
           <span className="text-stone-900 dark:text-stone-100 font-medium">
-            Bennett Univ. • B.Tech AI (CGPA 8.71)
+            Single-Image Super-Resolution (SISR) & SSL
           </span>
         </div>
 
@@ -59,7 +59,7 @@ export function ResearchConsole() {
 
       <div className="mt-4 pt-3 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between text-[10px] text-stone-500 dark:text-stone-400">
         <span>Location: Greater Noida, UP</span>
-        <span>Expected: May 2028</span>
+        <span>Status: Active Experimentation</span>
       </div>
     </div>
   );

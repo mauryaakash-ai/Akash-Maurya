@@ -25,7 +25,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed max-w-sm">
-              Research in Deep Learning, Computer Vision, and Image Super-Resolution. B.Tech Artificial Intelligence at Bennett University.
+              Research in Deep Learning, Computer Vision, and Image Super-Resolution. Focused on model architectures, self-supervised learning, and applied robotics.
             </p>
             <div className="flex items-center gap-1.5 text-xs text-stone-500 dark:text-stone-400">
               <MapPin className="w-3.5 h-3.5 text-stone-400" />
@@ -98,9 +98,9 @@ export function Footer() {
             © {new Date().getFullYear()} {profileData.name} — Built with Next.js & Tailwind CSS
           </div>
           <div className="flex items-center gap-4">
-            <span>Bennett University (B.Tech AI 2024–2028)</span>
+            <span>AI / ML Engineer Portfolio</span>
             <span>•</span>
-            <span>CGPA: 8.71 / 10</span>
+            <span>Research & Implementation</span>
           </div>
         </div>
       </div>

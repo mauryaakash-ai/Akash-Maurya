@@ -10,7 +10,7 @@ const directorySections = [
     number: '01',
     title: 'About & Research Profile',
     href: '/about',
-    desc: 'Academic background at Bennett University, laboratory focus, and research methodology in computer vision.',
+    desc: 'Biographical background, core laboratory focus, and research methodology in computer vision.',
     icon: <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
     tag: 'Profile & Background'
   },
@@ -58,9 +58,9 @@ const directorySections = [
     number: '07',
     title: 'Academic Education Record',
     href: '/education',
-    desc: 'B.Tech in Artificial Intelligence at Bennett University (CGPA: 8.71/10) and secondary school academic records.',
+    desc: 'Undergraduate degree coursework in Artificial Intelligence and secondary school academic records.',
     icon: <GraduationCap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
-    tag: 'CGPA 8.71 / 10'
+    tag: 'Academic Records'
   },
   {
     number: '08',
@@ -74,7 +74,7 @@ const directorySections = [
     number: '09',
     title: 'Contact & Verification Hub',
     href: '/contact',
-    desc: 'Direct email, WhatsApp messaging, phone channel, verified GitHub, and inquiry dispatcher form.',
+    desc: 'Direct email, WhatsApp messaging, verified GitHub, and inquiry dispatcher form.',
     icon: <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
     tag: 'Direct Messaging'
   }

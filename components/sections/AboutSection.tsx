@@ -33,7 +33,7 @@ export function AboutSection() {
               <div className="absolute inset-0 bg-stone-950/10 pointer-events-none" />
               <div className="absolute bottom-2 left-2 right-2 bg-stone-950/80 backdrop-blur-xs text-stone-100 p-2 rounded text-[11px] font-mono flex items-center justify-between">
                 <span>Akash Maurya</span>
-                <span className="text-stone-400">Bennett Univ.</span>
+                <span className="text-stone-400">AI / ML Researcher</span>
               </div>
             </div>
 
@@ -52,7 +52,7 @@ export function AboutSection() {
           <div className="lg:col-span-8 space-y-6">
             <div className="space-y-4 text-base text-stone-700 dark:text-stone-300 leading-relaxed">
               <p className="text-lg font-medium text-stone-950 dark:text-stone-100 leading-snug">
-                I am an AI/ML undergraduate specializing in computer vision, deep neural networks, and image super-resolution, driven by experimental rigor and production-grade implementation.
+                I am an AI/ML undergraduate researcher specializing in computer vision, deep neural networks, and image super-resolution, driven by experimental rigor and production-grade implementation.
               </p>
               <p>
                 My work spans designing, training, and benchmarking both convolutional (EDSR, VDSR, ESRGAN) and vision transformer architectures (SwinIR, HAT, DRCT) across diverse optical, infrared, and domain-specific datasets. Through summer research at ViSecure Systems and biometric research at Ashoka University under the Simons Fellowship Program, I have focused on solving concrete computer vision challenges: mitigating sensor degradation, specular reflection artifacts, and labeled data scarcity.
