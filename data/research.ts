@@ -5,6 +5,7 @@ export interface ResearchArea {
   keyConcepts: string[];
   modelsAndMethods: string[];
   datasetsAndTools: string[];
+  githubUrl?: string;
 }
 
 export const researchAreasData: ResearchArea[] = [
@@ -19,7 +20,8 @@ export const researchAreasData: ResearchArea[] = [
       "Sub-Pixel Upsampling (PixelShuffle)"
     ],
     modelsAndMethods: ["EDSR", "VDSR", "ESRGAN", "Real-ESRGAN", "SwinIR", "HAT", "DRCT", "SRTTA", "SRCNN", "FSRCNN"],
-    datasetsAndTools: ["DIV2K", "RealSR", "Urban100", "Vehicle-10", "PlantVillage Disease", "PyTorch", "OpenCV"]
+    datasetsAndTools: ["DIV2K", "RealSR", "Urban100", "Vehicle-10", "PlantVillage Disease", "PyTorch", "OpenCV"],
+    githubUrl: "https://github.com/mauryaakash-ai"
   },
   {
     id: "self-supervised-learning",
@@ -32,7 +34,8 @@ export const researchAreasData: ResearchArea[] = [
       "Unsupervised Super-Resolution Pipelines"
     ],
     modelsAndMethods: ["SimCLR", "Contrastive Loss", "Self-Supervised EDSR", "Self-Supervised HAT", "Self-Supervised ESRGAN"],
-    datasetsAndTools: ["Custom Combined HR/LR Dataset", "Vehicle-10", "PyTorch", "Jupyter Notebook"]
+    datasetsAndTools: ["Custom Combined HR/LR Dataset", "Vehicle-10", "PyTorch", "Jupyter Notebook"],
+    githubUrl: "https://github.com/mauryaakash-ai/SIMCLR_PYTORCH"
   },
   {
     id: "computer-vision",
@@ -45,7 +48,8 @@ export const researchAreasData: ResearchArea[] = [
       "Color Space Transformations & Clustering"
     ],
     modelsAndMethods: ["PSNR (Peak Signal-to-Noise Ratio)", "SSIM (Structural Similarity)", "K-Means Quantization", "Spatial Filtering"],
-    datasetsAndTools: ["OpenCV", "scikit-learn", "NumPy", "Matplotlib", "Python"]
+    datasetsAndTools: ["OpenCV", "scikit-learn", "NumPy", "Matplotlib", "Python"],
+    githubUrl: "https://github.com/mauryaakash-ai/ImageLab"
   },
   {
     id: "biometric-identification",
@@ -58,7 +62,8 @@ export const researchAreasData: ResearchArea[] = [
       "Morphological Pattern Identification (Snake Biometrics)"
     ],
     modelsAndMethods: ["Biometric Feature Extraction", "Reflection Correction Algorithms", "Lighting Angle Modulation"],
-    datasetsAndTools: ["Buffalo Iris Image Sets", "Public Biometric Datasets", "OpenCV", "Simons Fellowship Research"]
+    datasetsAndTools: ["Buffalo Iris Image Sets", "Public Biometric Datasets", "OpenCV", "Simons Fellowship Research"],
+    githubUrl: "https://github.com/mauryaakash-ai"
   },
   {
     id: "embedded-ai-robotics",
@@ -71,6 +76,7 @@ export const researchAreasData: ResearchArea[] = [
       "Hardware Timer & PWM Speed Modulation"
     ],
     modelsAndMethods: ["Proportional-Integral-Derivative (PID)", "ADC Signal Filtering", "Obstacle Detection State Machine"],
-    datasetsAndTools: ["ESP32", "Arduino", "C/C++", "IR Sensor Arrays", "Ultrasonic Transducers"]
+    datasetsAndTools: ["ESP32", "Arduino", "C/C++", "IR Sensor Arrays", "Ultrasonic Transducers"],
+    githubUrl: "https://github.com/mauryaakash-ai"
   }
 ];

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Layers, Eye, Sparkles, Binary, Cpu, ChevronRight, Tag } from 'lucide-react';
+import { Layers, Eye, Sparkles, Binary, Cpu, ChevronRight, Github, ArrowUpRight } from 'lucide-react';
 import { researchAreasData } from '@/data/research';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -45,7 +45,7 @@ export function ResearchSection() {
                 <button
                   key={area.id}
                   onClick={() => setSelectedAreaId(area.id)}
-                  className={`w-full text-left p-3.5 rounded-lg border transition-all flex items-center justify-between group ${
+                  className={`w-full text-left p-3.5 rounded-lg border transition-all flex items-center justify-between group cursor-pointer ${
                     isSelected
                       ? 'bg-white dark:bg-stone-900 border-stone-900 dark:border-stone-100 shadow-xs'
                       : 'bg-stone-50 dark:bg-stone-900/40 border-stone-200 dark:border-stone-800/80 hover:border-stone-300 dark:hover:border-stone-700'
@@ -76,14 +76,30 @@ export function ResearchSection() {
           {/* Deep-Dive Area Inspector on Right */}
           <div className="md:col-span-7 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg p-6 shadow-xs space-y-6">
             <div className="border-b border-stone-100 dark:border-stone-800 pb-4">
-              <div className="flex items-center gap-2 mb-1.5">
-                <span className="font-mono text-xs px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
-                  Research Domain
-                </span>
-                <span className="font-mono text-xs text-stone-400">
-                  // {activeArea.id}
-                </span>
+              <div className="flex items-center justify-between gap-2 mb-1.5">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
+                    Research Domain
+                  </span>
+                  <span className="font-mono text-xs text-stone-400">
+                    // {activeArea.id}
+                  </span>
+                </div>
+
+                {activeArea.githubUrl && (
+                  <a
+                    href={activeArea.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-stone-700 dark:text-stone-300 hover:text-blue-600 dark:hover:text-blue-400 px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 transition-colors"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    <span>View Repository</span>
+                    <ArrowUpRight className="w-3 h-3 opacity-60" />
+                  </a>
+                )}
               </div>
+
               <h3 className="text-lg font-bold text-stone-950 dark:text-stone-50">
                 {activeArea.title}
               </h3>

@@ -26,7 +26,7 @@ export function ProjectsSection() {
           </div>
         </div>
 
-        {/* Projects 2x2 Grid with Asymmetric Editorial Layout */}
+        {/* Projects 2x2 Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           {projectsData.map((project, index) => (
             <div
@@ -84,7 +84,7 @@ export function ProjectsSection() {
                   </div>
                 </div>
 
-                {/* Bullet Contributions (Concise) */}
+                {/* Bullet Contributions */}
                 <ul className="space-y-1.5 text-xs text-stone-700 dark:text-stone-300 pt-1">
                   {project.keyContributions.slice(0, 2).map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
@@ -106,17 +106,25 @@ export function ProjectsSection() {
                       {tech}
                     </span>
                   ))}
-                  {project.techStack.length > 3 && (
-                    <span className="font-mono text-[10px] px-1.5 py-0.5 text-stone-400">
-                      +{project.techStack.length - 3}
-                    </span>
-                  )}
                 </div>
 
                 <div className="flex items-center gap-2">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="View GitHub Repository"
+                      className="inline-flex items-center gap-1 p-2 rounded-lg border border-stone-300 dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 hover:text-stone-950 dark:hover:text-white transition-colors"
+                    >
+                      <Github className="w-3.5 h-3.5" />
+                      <ArrowUpRight className="w-3 h-3 opacity-60" />
+                    </a>
+                  )}
+
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-mono font-medium bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 hover:bg-stone-800 dark:hover:bg-white transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 hover:bg-stone-800 dark:hover:bg-white transition-colors cursor-pointer"
                   >
                     <span>View Case Study</span>
                     <ChevronRight className="w-3.5 h-3.5" />

@@ -29,7 +29,7 @@ export const projectsData: ProjectItem[] = [
     dates: "Jan 2026 – May 2026",
     teamType: "Team",
     description: "Evaluated deep learning-based super-resolution models including SRCNN, FSRCNN, VDSR, and EDSR alongside SwinIR and transformer-based architectures for thermal and low-resolution infrared image reconstruction.",
-    problem: "Thermal infrared sensors often produce low-resolution, noisy imagery due to physical detector constraints and sensor cost. Standard optical super-resolution models often blur subtle thermal thermal gradients and edge boundaries without specialized architectural analysis.",
+    problem: "Thermal infrared sensors often produce low-resolution, noisy imagery due to physical detector constraints and sensor cost. Standard optical super-resolution models often blur subtle thermal gradients and edge boundaries without specialized architectural analysis.",
     approach: "Benchmarked convolutional backbones (SRCNN, FSRCNN, VDSR, EDSR) and transformer-based networks (SwinIR). Analyzed architectural components, receptive field sizes, inference pipelines, loss functions, and spatial attention mechanisms on low-resolution infrared datasets.",
     keyContributions: [
       "Evaluated deep learning-based super-resolution models including SRCNN, FSRCNN, VDSR, and EDSR for thermal image enhancement.",
@@ -117,7 +117,7 @@ export const projectsData: ProjectItem[] = [
       "Deep practical insight into unsupervised clustering convergence, Lloyd's algorithm behavior, and vector quantization limits.",
       "Explored trade-offs between compression ratio, computational complexity (O(n * k * d)), and visual fidelity."
     ],
-    githubUrl: "https://github.com/mauryaakash-ai",
+    githubUrl: "https://github.com/mauryaakash-ai/ImageLab",
     diagramSpec: {
       title: "K-Means Color Quantization & Compression Flow",
       stages: [
@@ -152,7 +152,7 @@ export const projectsData: ProjectItem[] = [
       "End-to-end full-stack software lifecycle: schema design, RESTful endpoint architecture, session handling, and clean UI design for non-technical users.",
       "Database indexing, transaction integrity, and CRUD optimization in SQLite."
     ],
-    githubUrl: "https://github.com/mauryaakash-ai",
+    githubUrl: "https://github.com/mauryaakash-ai/Krishishram",
     diagramSpec: {
       title: "Full-Stack Application Architecture",
       stages: [
