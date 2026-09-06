@@ -1,24 +1,18 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Copy, Check, Send, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, Copy, Check, Send, ArrowUpRight } from 'lucide-react';
 import { profileData } from '@/data/profile';
 
 export function ContactSection() {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
   const [formState, setFormState] = useState({ name: '', email: '', message: '', subject: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const copyToClipboard = (text: string, type: 'email' | 'phone') => {
+  const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-    if (type === 'email') {
-      setCopiedEmail(true);
-      setTimeout(() => setCopiedEmail(false), 2000);
-    } else {
-      setCopiedPhone(true);
-      setTimeout(() => setCopiedPhone(false), 2000);
-    }
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -53,10 +47,10 @@ export function ContactSection() {
           <div className="lg:col-span-5 space-y-4">
             <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg p-6 shadow-xs space-y-5">
               <h3 className="font-mono text-xs uppercase tracking-wider text-stone-900 dark:text-stone-100 font-semibold">
-                Direct Contact Buttons
+                Direct Contact Channels
               </h3>
 
-              {/* 1. WhatsApp Button (With WhatsApp Logo & Direct Link - No number exposed in label) */}
+              {/* 1. WhatsApp Button (With WhatsApp Logo & Direct Link) */}
               <div className="space-y-1">
                 <span className="text-[10px] font-mono text-stone-500 dark:text-stone-400 uppercase tracking-wider">
                   Instant Messaging:
@@ -85,7 +79,7 @@ export function ContactSection() {
                 </a>
               </div>
 
-              {/* 2. Email Button with Copy Option */}
+              {/* 2. Direct Email Button with Copy Option */}
               <div className="space-y-1">
                 <span className="text-[10px] font-mono text-stone-500 dark:text-stone-400 uppercase tracking-wider">
                   Direct Email:
@@ -99,38 +93,11 @@ export function ContactSection() {
                     <span className="font-semibold break-all">{profileData.email}</span>
                   </a>
                   <button
-                    onClick={() => copyToClipboard(profileData.email, 'email')}
+                    onClick={() => copyToClipboard(profileData.email)}
                     title="Copy email"
                     className="px-3 bg-stone-100 dark:bg-stone-800 border-l border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:text-stone-950 dark:hover:text-white transition-colors flex items-center justify-center cursor-pointer"
                   >
                     {copiedEmail ? (
-                      <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                    ) : (
-                      <Copy className="w-4 h-4" />
-                    )}
-                  </button>
-                </div>
-              </div>
-
-              {/* 3. Phone Call Button */}
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono text-stone-500 dark:text-stone-400 uppercase tracking-wider">
-                  Phone / Voice:
-                </span>
-                <div className="flex items-stretch rounded-lg border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 shadow-2xs overflow-hidden">
-                  <a
-                    href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
-                    className="flex-1 flex items-center gap-2.5 px-3.5 py-2.5 text-xs font-mono text-stone-900 dark:text-stone-100 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
-                  >
-                    <Phone className="w-4 h-4 text-stone-600 dark:text-stone-400 shrink-0" />
-                    <span className="font-semibold">{profileData.phone}</span>
-                  </a>
-                  <button
-                    onClick={() => copyToClipboard(profileData.phone, 'phone')}
-                    title="Copy phone number"
-                    className="px-3 bg-stone-100 dark:bg-stone-800 border-l border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:text-stone-950 dark:hover:text-white transition-colors flex items-center justify-center cursor-pointer"
-                  >
-                    {copiedPhone ? (
                       <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                     ) : (
                       <Copy className="w-4 h-4" />
