@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Microscope, Code2, Cpu, CheckCircle2, Award, Terminal } from 'lucide-react';
+import { Microscope, Code2, Cpu, CheckCircle2, Award, Terminal, User, MapPin } from 'lucide-react';
 import { profileData } from '@/data/profile';
 
 export function AboutSection() {
@@ -20,26 +20,34 @@ export function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Profile Photo / Avatar Column */}
+          {/* Prominent Profile Photo Card */}
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <div className="relative aspect-4/5 w-full max-w-xs mx-auto lg:max-w-none rounded-lg overflow-hidden border border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900 shadow-xs">
+            <div className="relative aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none rounded-xl overflow-hidden border-2 border-stone-300 dark:border-stone-700 bg-stone-100 dark:bg-stone-900 shadow-md">
               <Image
                 src="/profile.jpg"
-                alt="Akash Maurya"
+                alt="Akash Maurya - AI/ML Engineer"
                 fill
-                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                className="object-cover object-top hover:scale-[1.02] transition-transform duration-300"
                 priority
               />
-              <div className="absolute inset-0 bg-stone-950/10 pointer-events-none" />
-              <div className="absolute bottom-2 left-2 right-2 bg-stone-950/80 backdrop-blur-xs text-stone-100 p-2 rounded text-[11px] font-mono flex items-center justify-between">
-                <span>Akash Maurya</span>
-                <span className="text-stone-400">AI / ML Researcher</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent pointer-events-none" />
+              
+              <div className="absolute bottom-3 left-3 right-3 bg-stone-950/90 backdrop-blur-xs text-stone-100 p-3 rounded-lg border border-stone-800 text-xs font-mono space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-white text-sm">{profileData.name}</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-600 text-white font-semibold">AI/ML</span>
+                </div>
+                <div className="text-[11px] text-stone-300 flex items-center gap-1">
+                  <MapPin className="w-3 h-3 text-stone-400" />
+                  <span>{profileData.location}</span>
+                </div>
               </div>
             </div>
 
-            <div className="p-4 rounded-lg bg-stone-50 dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 text-xs font-mono space-y-2">
+            <div className="p-4 rounded-xl bg-stone-50 dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 text-xs font-mono space-y-2 shadow-2xs">
               <div className="text-stone-900 dark:text-stone-100 font-semibold flex items-center gap-1.5">
-                <Microscope className="w-3.5 h-3.5 text-blue-600" />
+                <Microscope className="w-4 h-4 text-blue-600" />
                 <span>Primary Lab Focus</span>
               </div>
               <p className="text-stone-600 dark:text-stone-400 font-sans text-xs leading-relaxed">
@@ -64,9 +72,9 @@ export function AboutSection() {
 
             {/* Research & Engineering Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-              <div className="p-4 rounded border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-2xs space-y-2">
+              <div className="p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-2xs space-y-2">
                 <div className="w-7 h-7 rounded bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-800 dark:text-stone-200">
-                  <Microscope className="w-4 h-4" />
+                  <Microscope className="w-4 h-4 text-blue-600" />
                 </div>
                 <h3 className="font-semibold text-xs font-mono uppercase tracking-wider text-stone-900 dark:text-stone-100">
                   Model Architecture
@@ -76,9 +84,9 @@ export function AboutSection() {
                 </p>
               </div>
 
-              <div className="p-4 rounded border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-2xs space-y-2">
+              <div className="p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-2xs space-y-2">
                 <div className="w-7 h-7 rounded bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-800 dark:text-stone-200">
-                  <Code2 className="w-4 h-4" />
+                  <Code2 className="w-4 h-4 text-purple-600" />
                 </div>
                 <h3 className="font-semibold text-xs font-mono uppercase tracking-wider text-stone-900 dark:text-stone-100">
                   Quantitative Eval
@@ -88,9 +96,9 @@ export function AboutSection() {
                 </p>
               </div>
 
-              <div className="p-4 rounded border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-2xs space-y-2">
+              <div className="p-4 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-2xs space-y-2">
                 <div className="w-7 h-7 rounded bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-800 dark:text-stone-200">
-                  <Cpu className="w-4 h-4" />
+                  <Cpu className="w-4 h-4 text-emerald-600" />
                 </div>
                 <h3 className="font-semibold text-xs font-mono uppercase tracking-wider text-stone-900 dark:text-stone-100">
                   Applied Systems
