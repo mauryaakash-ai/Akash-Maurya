@@ -8,6 +8,8 @@ export interface ExperienceItem {
   mode: string;
   supervisor?: string;
   program?: string;
+  websiteUrl?: string;
+  websiteLabel?: string;
   summary: string;
   highlights: string[];
   techStack: string[];
@@ -73,6 +75,8 @@ export const experienceData: ExperienceItem[] = [
     dates: "Aug 2025 – Present",
     periodLabel: "2025 – Present",
     mode: "Leadership & Technical Mentorship",
+    websiteUrl: "https://robogenesissoai.in",
+    websiteLabel: "robogenesissoai.in",
     summary: "Co-founded and lead university robotics and AI society, organizing large-scale hackathons and guiding hands-on engineering projects.",
     highlights: [
       "Co-founded and lead a robotics and AI club with 60+ student members, managing a core team of 23 and organizing technical workshops, hackathons, and student onboarding sessions.",
